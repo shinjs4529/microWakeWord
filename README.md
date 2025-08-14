@@ -1,3 +1,12 @@
+- 모델학습
+
+      jupyter notebook notebooks/basic_training_notebook.ipynb
+- 추론
+
+      cd notebooks && python3 audio_clip_test.py
+
+
+
 ![microWakeWord logo](etc/logo.png)
 
 microWakeWord is an open-source wakeword library for detecting custom wake words on low power devices. It produces models that are suitable for using [TensorFlow Lite for Microcontrollers](https://www.tensorflow.org/lite/microcontrollers). The models are suitable for real-world usage with low false accept and false reject rates.
