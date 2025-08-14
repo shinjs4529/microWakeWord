@@ -1,3 +1,33 @@
+- __모델학습__
+  > ~/Workspace/Python/microWakeWord/.venv3.10/ 를 환경으로 사용
+
+      jupyter notebook notebooks/basic_training_notebook.ipynb
+
+- __모델 출력 옵션__
+
+  --test_tf_nonstreaming:
+  > 출력되는 결과물 확인되지 않음
+
+  --test_tflite_nonstreaming:
+  > notebooks/trained_models/wakeword/tflite_non_stream/에 non_stream.tflite 이름으로 모델 출력 
+
+  --test_tflite_nonstreaming_quantized:
+  > notebooks/trained_models/wakeword/tflite_non_stream_quant 디렉토리는 생성되나 모델은 출력 실패함
+
+  --test_tflite_streaming:
+  > notebooks/trained_models/wakeword/tflite_stream_state_internal/에 stream_state_internal.tflite 이름으로 모델 출력
+
+  --test_tflite_streaming_quantized:
+  > notebooks/trained_models/wakeword/tflite_stream_state_internal_quant/에 stream_state_internal_quant.tflite 이름으로 모델 출력
+
+
+- __추론__
+
+      cd notebooks && python3 audio_clip_test.py
+  > streaming 모델은 stride를 3으로, nonstreaming 모델은 stride를 1로 설정하여 추론
+
+
+
 ![microWakeWord logo](etc/logo.png)
 
 microWakeWord is an open-source wakeword library for detecting custom wake words on low power devices. It produces models that are suitable for using [TensorFlow Lite for Microcontrollers](https://www.tensorflow.org/lite/microcontrollers). The models are suitable for real-world usage with low false accept and false reject rates.
