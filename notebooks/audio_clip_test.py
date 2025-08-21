@@ -7,7 +7,7 @@ import os
 
 m = Model(os.path.join("trained_models/wakeword", "tflite_stream_state_internal", "stream_state_internal.tflite"), stride=3)
 #m = Model(os.path.join("trained_models/wakeword", "tflite_stream_state_internal_quant", "stream_state_internal_quant.tflite"), stride=3)
-#m = Model(os.path.join("trained_models/wakeword", "tflite_non_stream", "non_stream_main.tflite"), stride=1)
+#m = Model(os.path.join("trained_models/wakeword", "tflite_non_stream", "non_stream.tflite"), stride=1)
 
 filePath = "wavFileTest/ci_6.wav"
 wav, sr = sf.read(filePath)
